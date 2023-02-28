@@ -1,34 +1,19 @@
-/*
-for (let age = 30; age < 40; age++) {
-    console.log(`I'm ${age}years old. Happy birthday to me!`);
-}
 
-const gifts = ["teddy bear", "drone", "doll"];
+const newArray = [];
 
-function wrapGifts(gifts) {
-    for (let i = 0; i < gifts.length; i++) {
-        console.log(`Wrapped ${gifts[i]} and added a bow!]`);
+function writeCards(cardRecipientArray,eventName){
+    for (let n = 0; n < cardRecipientArray.length; n++){
+        const letterOfThanks = `Thank you, ${cardRecipientArray[n]}, for the wonderful ${eventName} gift!`;
+        newArray.push(letterOfThanks);
     }
-    return gifts;
+    return newArray;
 }
-wrapGifts(gifts);
-*/
 
-
-
-function writeCards(nameOfRecipient, ocassion) {
-    const returnedArray = [];
-
-    for (let c = 0; c <nameOfRecipient.length; c++) {
-        const card = (`Thank you, ${nameOfRecipient[c]}, for the wonderful surprise gift!`);
-        returnedArray.push(card);
+function countDown(positiveInteger){
+    let i = 0;
+    while(positiveInteger >= i){
+        console.log(positiveInteger);
+        positiveInteger--;
     }
-    return returnedArray;
 }
-
-function countDown(integer){
-    for (let i = integer; i >= 0; i--) {
-        console.log(i);
-    }
-    return integer;
-}
+countDown(4);
